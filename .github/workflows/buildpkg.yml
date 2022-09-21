@@ -4,7 +4,7 @@ on:
    inputs:
      auth:
         description: 'just for fun hit enter'
-        required: true
+        required: false
         default: ""
   
 jobs:
@@ -16,7 +16,7 @@ jobs:
 
       - name: Install Required Packages
         run: |
-          apt-get update
-          apt-get install neofetch -y
+          pkg update
+          pkg install neofetch -y
           neofetch
   
