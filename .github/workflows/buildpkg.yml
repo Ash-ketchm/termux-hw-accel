@@ -16,7 +16,7 @@ jobs:
 
       - name: Install Required Packages
         run: |
-          pkg update
-          pkg install neofetch -y
+          apt update
+          apt install neofetch -y
           neofetch
   
