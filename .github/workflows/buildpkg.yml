@@ -16,7 +16,7 @@ jobs:
       - name: Install Required Packages
         run: |
           sudo apt-get update
-          sudo apt-get install docker.io -y
+          sudo apt-get install flex -y
 
       - name: Run docker 
         run: |
