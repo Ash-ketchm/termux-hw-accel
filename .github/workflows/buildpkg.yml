@@ -1,5 +1,4 @@
 name: Build pkgs
-on:
 
 jobs:
   buildpkg:
