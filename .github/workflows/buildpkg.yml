@@ -1,5 +1,12 @@
 name: Build pkgs
-
+on: 
+  workflow_dispatch:
+   inputs:
+     auth:
+        description: 'just for fun hit enter'
+        required: true
+        default: ""
+  
 jobs:
   buildpkg:
     runs-on: ubuntu-22.04
