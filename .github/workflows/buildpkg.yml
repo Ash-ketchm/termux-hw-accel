@@ -1,0 +1,21 @@
+name: Build pkgs
+on:
+
+jobs:
+  buildpkg:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v2.1.0
+
+      - name: Install Required Packages
+        run: |
+          sudo apt-get update
+          sudo apt-get install docker.io -y
+
+      - name: Run docker 
+        run: |
+          docker run -it termux/termux-docker:latest
+          apt-get update
+          apt-get install neofetch -y
+          neofetch
+  
