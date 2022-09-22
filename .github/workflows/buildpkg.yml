@@ -10,12 +10,12 @@ on:
 jobs:
   buildpkg:
     runs-on: ubuntu-22.04
-    steps:
+    container:
+    image: termux/termux-docker:latest
+ 
     - name: Docker Setup QEMU
       uses: docker/setup-qemu-action@v1.2.0
 
     - name: Satify Dependencies
       run: sudo apt-get update; sudo apt-get install git build-essential binfmt-support qemu-user-static debootstrap -y
-    container:
-    image: termux/termux-docker:latest
- 
+    
