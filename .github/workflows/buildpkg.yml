@@ -6,7 +6,7 @@ on:
         description: 'hit enter'
         required: false
         default: ""
-  
+
 jobs:
   buildpkg:
     runs-on: ubuntu-22.04
@@ -20,5 +20,6 @@ jobs:
       run: |
            cat /etc/os-release
            arch
-           git clone https://github.com/termux/termux-docker 
+           wget https://github.com/termux/termux-docker/archive/refs/heads/master.zip
            cd ./termux-docker
+          ./build-all.sh
