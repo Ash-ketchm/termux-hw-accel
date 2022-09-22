@@ -18,4 +18,4 @@ jobs:
       run: sudo apt-get update; sudo apt-get install git build-essential binfmt-support qemu-user-static debootstrap -y
  
     - name: test env
-      run: cat /etc/os-release; arch; wget https://github.com/termux/termux-docker/archive/refs/heads/master.zip; unzip termux-docker-master.zip; cd ./termux-docker*; ./build-all.sh
+      run: cat /etc/os-release; arch; wget https://github.com/termux/termux-docker/archive/refs/heads/master.zip; unzip master.zip; cd ./*master*; ./build-all.sh
