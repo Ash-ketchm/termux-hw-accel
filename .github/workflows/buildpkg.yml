@@ -11,7 +11,7 @@ jobs:
   buildpkg:
     runs-on: ubuntu-22.04
     container:
-      image: rudloff/termux
+      image: termux/termux-docker:latest
     steps:
 
       - name: Install Required Packages
