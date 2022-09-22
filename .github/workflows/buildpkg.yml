@@ -17,4 +17,6 @@ jobs:
     - name: Satify Dependencies
       run: sudo apt-get update; sudo apt-get install git build-essential binfmt-support qemu-user-static debootstrap -y
     - name: test env
-      run: git clone https://github.com/termux/termux-docker && cd ./termux-docker
+      run: |
+           git clone https://github.com/termux/termux-docker 
+           cd ./termux-docker
