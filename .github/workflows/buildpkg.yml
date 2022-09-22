@@ -3,20 +3,19 @@ on:
   workflow_dispatch:
    inputs:
      auth:
-        description: 'just for fun hit enter'
+        description: 'hit enter'
         required: false
         default: ""
   
 jobs:
   buildpkg:
     runs-on: ubuntu-22.04
-    container:
-      image: termux/termux-docker:latest
     steps:
+    - name: Docker Setup QEMU
+      uses: docker/setup-qemu-action@v1.2.0
 
-      - name: Install Required Packages
-        run: |
-          apt update
-          apt install neofetch -y
-          neofetch
-  
+    - name: Satify Dependencies
+      run: sudo apt-get update; sudo apt-get install git build-essential binfmt-support qemu-user-static debootstrap -y
+    container:
+    image: termux/termux-docker:latest
+ 
