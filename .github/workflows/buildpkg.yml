@@ -10,7 +10,7 @@ on:
 jobs:
   buildpkg:
     runs-on: ubuntu-22.04
- 
+    steps:
     - name: Docker Setup QEMU
       uses: docker/setup-qemu-action@v1.2.0
 
