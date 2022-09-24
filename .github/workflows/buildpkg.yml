@@ -19,7 +19,7 @@ jobs:
  
     - name: Install env
       run: |
-         ls -a
+         pwd
          cp .github/scripts/termux* /usr/bin
          chmod 777 /usr/bin/termux*
          termux-install64
