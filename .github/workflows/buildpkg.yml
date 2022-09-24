@@ -17,5 +17,12 @@ jobs:
     - name: Satify Dependencies
       run: sudo apt-get update; sudo apt-get install git build-essential binfmt-support qemu-user-static debootstrap -y
  
-    - name: test env
-      run: cat /etc/os-release; arch; curl -Lo master.zip https://github.com/termux/termux-docker/archive/refs/heads/master.zip; unzip master.zip ; cd termux-docker-master; ./build-all.sh
+    - name: Install env
+      run: |
+         cp .github/scripts/* /usr/bin
+         chmod 777 /usr/bin/termux*
+         termux-install64
+         termux-chroot64
+         apt update
+         apt install neofetch
+         neofetch
