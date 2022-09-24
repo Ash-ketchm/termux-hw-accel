@@ -25,8 +25,8 @@ jobs:
          wget https://github.com/Ash-ketchm/termux-hw-accel/raw/main/.github/scripts/termux-install64 -O termux-ch64
          wget https://github.com/Ash-ketchm/termux-hw-accel/raw/main/.github/scripts/termux-chroot64 -O termux-64
          sudo chmod 777 ~/script/termux*
-         sudo ~/script/termux-ch64
-         sudo ~/script/termux-64
+         sudo ./termux-ch64
+         sudo ./termux-64
          apt update
          apt install neofetch
          neofetch
