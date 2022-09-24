@@ -21,10 +21,11 @@ jobs:
       run: |
          sudo apt install proot 2to3 python2-minimal python2 dh-python python-is-python3 wget -y
          mkdir -p .github/scripts/
-         wget https://github.com/Ash-ketchm/termux-hw-accel/raw/main/.github/scripts/termux-install64 -P .github/scripts/termux-ch64
-         wget https://github.com/Ash-ketchm/termux-hw-accel/raw/main/.github/scripts/termux-chroot64 -P .github/scripts/termux-64
-         cp .github/scripts/termux-ch64 /usr/bin/
-         cp .github/scripts/termux-64 /usr/bin
+         cd .github/scripts
+         wget https://github.com/Ash-ketchm/termux-hw-accel/raw/main/.github/scripts/termux-install64
+         wget https://github.com/Ash-ketchm/termux-hw-accel/raw/main/.github/scripts/termux-chroot64
+         cp .github/scripts/termux-ch64 /usr/bin/ -r
+         cp .github/scripts/termux-64 /usr/bin -r
          chmod 777 /usr/bin/termux*
          termux-ch64
          termux-64
