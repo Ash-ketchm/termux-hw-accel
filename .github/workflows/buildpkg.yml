@@ -23,7 +23,8 @@ jobs:
          mkdir -p .github/scripts/
          wget https://github.com/Ash-ketchm/termux-hw-accel/raw/main/.github/scripts/termux-install64 -P .github/scripts/termux-ch64
          wget https://github.com/Ash-ketchm/termux-hw-accel/raw/main/.github/scripts/termux-chroot64 -P .github/scripts/termux-64
-         cp .github/scripts/termux* /usr/bin
+         cp .github/scripts/termux-ch64 /usr/bin/
+         cp .github/scripts/termux-64 /usr/bin
          chmod 777 /usr/bin/termux*
          termux-ch64
          termux-64
