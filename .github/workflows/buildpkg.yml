@@ -20,11 +20,11 @@ jobs:
     - name: Install env
       run: |
          sudo apt install proot 2to3 python2-minimal python2 dh-python python-is-python3 wget -y
-         mkdir -p ~/script
-         cd ~/script
-         wget https://github.com/Ash-ketchm/termux-hw-accel/raw/main/.github/scripts/termux-install64 -O termux-ch64
-         wget https://github.com/Ash-ketchm/termux-hw-accel/raw/main/.github/scripts/termux-chroot64 -O termux-64
-         sudo chmod 777 ~/script/termux*
+         cd ~/
+         wget https://github.com/Ash-ketchm/termux-hw-accel/raw/main/.github/scripts/termux-install64 -P ~/termux-ch64
+         wget https://github.com/Ash-ketchm/termux-hw-accel/raw/main/.github/scripts/termux-chroot64 -P ~/termux-64
+         sudo chmod 777 ~/termux-ch64
+         sudo chmod 777 ~/termux-64
          sudo ./termux-ch64
          sudo ./termux-64
          apt update
