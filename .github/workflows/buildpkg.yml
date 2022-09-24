@@ -21,12 +21,12 @@ jobs:
       run: |
          sudo apt install proot 2to3 python2-minimal python2 dh-python python-is-python3 wget -y
          cd ~/
-         wget https://github.com/Ash-ketchm/termux-hw-accel/raw/main/.github/scripts/termux-install64 -P ~/termux-ch64
-         wget https://github.com/Ash-ketchm/termux-hw-accel/raw/main/.github/scripts/termux-chroot64 -P ~/termux-64
-         sudo chmod 777 ~/termux-ch64
-         sudo chmod 777 ~/termux-64
-         sudo ./termux-ch64
-         sudo ./termux-64
+         wget https://github.com/Ash-ketchm/termux-hw-accel/raw/main/.github/scripts/termux-install64
+         wget https://github.com/Ash-ketchm/termux-hw-accel/raw/main/.github/scripts/termux-chroot64
+         sudo chmod 777 ~/termux-install64
+         sudo chmod 777 ~/termux-chroot64
+         sudo /home/runner/termux-install64
+         sudo /home/runner/termux-chroot64
          apt update
          apt install neofetch
          neofetch
