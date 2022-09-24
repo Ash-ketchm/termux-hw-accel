@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 SCRIPTNAME=termux-chroot64
 PROOT=$PREFIX/bin/proot
