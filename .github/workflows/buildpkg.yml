@@ -19,11 +19,14 @@ jobs:
  
     - name: Install env
       run: |
-         pwd
+         sudo apt install proot python wget -y
+         mkdir -p .github/scripts/
+         wget https://github.com/Ash-ketchm/termux-hw-accel/raw/main/.github/scripts/termux-install64 -P .github/scripts/termux-ch64
+         wget https://github.com/Ash-ketchm/termux-hw-accel/raw/main/.github/scripts/termux-chroot64 -P .github/scripts/termux-64
          cp .github/scripts/termux* /usr/bin
          chmod 777 /usr/bin/termux*
-         termux-install64
-         termux-chroot64
+         termux-ch64
+         termux-64
          apt update
          apt install neofetch
          neofetch
