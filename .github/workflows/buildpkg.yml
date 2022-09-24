@@ -19,7 +19,7 @@ jobs:
  
     - name: Install env
       run: |
-         sudo apt install proot python wget -y
+         sudo apt install proot 2to3 python2-minimal python2 dh-python python-is-python3 wget -y
          mkdir -p .github/scripts/
          wget https://github.com/Ash-ketchm/termux-hw-accel/raw/main/.github/scripts/termux-install64 -P .github/scripts/termux-ch64
          wget https://github.com/Ash-ketchm/termux-hw-accel/raw/main/.github/scripts/termux-chroot64 -P .github/scripts/termux-64
